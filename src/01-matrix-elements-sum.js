@@ -1,4 +1,3 @@
-function getMatrixElementsSum (matrix) {
   let sum = 0;
   let numberColumns = 0;
   const arr = [];
@@ -8,9 +7,18 @@ function getMatrixElementsSum (matrix) {
       arr.push(matrix[i][j]);
     }
   }
-  for (let m = 0; m < Math.floor(arr.lastIndexOf(0) / numberColumns) * numberColumns; m++) {
-    sum += arr[m];
+
+  if (arr.lastIndexOf(0) !== -1) {
+    for (let m = 0; m < Math.floor(arr.lastIndexOf(0) / numberColumns) * numberColumns; m++) {
+      sum += arr[m];
+    }
+  } else {
+    for (let m = 0; m < arr.length; m++) {
+      sum += arr[m];
+    }
   }
+
   return sum;
 }
+
 module.exports = getMatrixElementsSum;
