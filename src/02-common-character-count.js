@@ -13,7 +13,7 @@ function getCommonCharacterCount(s1, s2) {
   let number = 0;
   let str = s2;
   for (let i = 0; i < s1.length; i++) {
-    if (s2.indexOf(s1[i]) !== -1) {
+    if (str.indexOf(s1[i]) !== -1) {
       number++;
       str = str.slice(0, str.indexOf(s1[i])) + str.slice(str.indexOf(s1[i]) + 1, str.length);
     }
@@ -22,4 +22,3 @@ function getCommonCharacterCount(s1, s2) {
 }
 
 module.exports = getCommonCharacterCount;
-

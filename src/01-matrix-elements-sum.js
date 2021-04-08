@@ -1,3 +1,4 @@
+function getMatrixElementsSum (matrix) {
   let sum = 0;
   let numberColumns = 0;
   const arr = [];
