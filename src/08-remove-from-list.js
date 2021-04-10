@@ -21,12 +21,25 @@ function removeKFromList(l, k) {
   let item = l;
   const result = [];
   while (item) {
-    if (item.value === k) {
+    if (item.value !== k) {
       result.push(item.value);
     }
     item = item.next;
   }
-  return result;
+  function ListNode(x) {
+    this.value = x;
+    this.next = null;
+  }
+
+  return result.reverse().reduce((acc, cur) => {
+    if (acc) {
+      const node = new ListNode(cur);
+      node.next = acc;
+      return node;
+    }
+
+    return new ListNode(cur);
+  }, null);
 }
 
 module.exports = removeKFromList;
