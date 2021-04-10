@@ -12,9 +12,9 @@
  *
  */
 function findIndex(array, value) {
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === value) {
-      return i;
+  for (let j = 0; j < array.length; j++) {
+    if (array[j] === value) {
+      return j;
     }
   }
   return false;
