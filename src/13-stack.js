@@ -10,23 +10,23 @@
  * stack.pop(); // undefined
  *
  */
- class Stack {
-  constructor (value){
-      value = [];
-      this.value = value
+class Stack {
+  constructor (value) {
+    // value = [];
+    this.value = value;
   }
 
-  push( element ) {
-    this.value.push(element)
-    return this.value
+  push(element) {
+    this.value.push(element);
+    return this.value;
   }
 
   pop() {
-      return this.value.pop()
+    return this.value.pop();
   }
 
   peek() {
-      return this.value[this.value.length-1]
+    return this.value[this.value.length - 1];
   }
 }
 
